@@ -278,3 +278,36 @@ body::after {
   z-index: -1;
   background: #0f1923;
 }
+
+.how-to-play-guide {
+  background: #1a232e;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #0008;
+  padding: 24px 32px;
+  margin-bottom: 28px;
+  color: #ece8e1;
+  max-width: 500px;
+  width: 100%;
+  text-align: left;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.how-to-play-guide h2 {
+  color: #ff4655;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.how-to-play-guide ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.how-to-play-guide li {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #ffb700;
+  font-family: 'Montserrat', Arial, sans-serif;
+}

@@ -100,6 +100,16 @@ function App() {
         gameOver={gameOver}
         onCancel={handleCancel}
       />
+      {(!started && !gameOver) && (
+        <div className="how-to-play-guide">
+          <h2>How to Play</h2>
+          <ul>
+            <li>Type the names of all playable Valorant agents.</li>
+            <li>You have 5 minutes to guess as many as you can.</li>
+            <li>Press <b>Play Quiz</b> to start. Good luck!</li>
+          </ul>
+        </div>
+      )}
       {started && !gameOver && (
         <>
           <GuessInput
