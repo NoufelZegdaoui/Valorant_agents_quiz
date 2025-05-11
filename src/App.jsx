@@ -11,7 +11,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [guessed, setGuessed] = useState([]);
   const [input, setInput] = useState("");
-  const [timer, setTimer] = useState(540); // 9 minutes in seconds
+  const [timer, setTimer] = useState(300); // 5 minutes in seconds
   const [gameOver, setGameOver] = useState(false);
   const [timeTaken, setTimeTaken] = useState(0);
   const timerRef = useRef();
@@ -40,14 +40,14 @@ function App() {
       setGameOver(true);
       setStarted(false);
       clearInterval(timerRef.current);
-      setTimeTaken(540 - timer);
+      setTimeTaken(300 - timer);
     }
   }, [score, started, timer]);
 
   // If time runs out and not all agents are guessed
   useEffect(() => {
     if (!started && gameOver && score !== agents.length) {
-      setTimeTaken(540 - timer);
+      setTimeTaken(300 - timer);
     }
   }, [gameOver, started, score, timer]);
 
@@ -56,7 +56,7 @@ function App() {
     setScore(0);
     setGuessed([]);
     setInput("");
-    setTimer(540);
+    setTimer(300);
     setGameOver(false);
     setTimeTaken(0);
   };
@@ -66,7 +66,7 @@ function App() {
     setScore(0);
     setGuessed([]);
     setInput("");
-    setTimer(540);
+    setTimer(300);
     setGameOver(false);
     setTimeTaken(0);
     clearInterval(timerRef.current);
